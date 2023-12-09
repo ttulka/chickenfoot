@@ -1,0 +1,22 @@
+{
+  "name": "chickenfoot",
+  "version": "1.0.0",
+  "description": "Chickenfoot 2D programming language",
+  "main": "chickenfoot.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "chickenfoot",
+    "2d",
+    "two-dimensional",
+    "programming-language",
+    "esolang",
+    "chicken"
+  ],
+  "author": "Tomas Tulka (ttulka)",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
