@@ -1,6 +1,6 @@
 # Chickenfoot
 
-<img src="logo.png" style="width: 15rem; float: right; margin: 1rem 0 1rem 2rem; border-radius: 1rem" align="right">
+<img src="logo.png" style="width: 30%; float: right; margin: 1rem 0 1rem 2rem; border-radius: 1rem; max-width: 250px; float: right" align="right">
 
 Chickenfoot is a two-dimensional programming language for chickens 🐔
 
