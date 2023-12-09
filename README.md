@@ -242,7 +242,7 @@ It takes source code as the first argument and optionally initial
 ```js
 const chickenfoot = require('chickenfoot')
 
-// interpreter
+// addition of two numbers
 const output = chickenfoot(`
          ⠮       ⠮
         ⠮ ⠫     ⠮ ⠫
@@ -258,7 +258,7 @@ const output = chickenfoot(`
 
 output[0] // 2 (x)
 output[1] // 3 (y)
-output[2] // 5 (result)
+output[2] // 5 (x+y)
 output[3] // 0
 ```
 
