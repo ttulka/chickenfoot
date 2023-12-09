@@ -16,6 +16,14 @@
   ],
   "author": "Tomas Tulka (ttulka)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ttulka/chickenfoot/issues"
+  },
+  "homepage": "https://github.com/ttulka/chickenfoot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttulka/chickenfoot.git"
+  },
   "devDependencies": {
     "jest": "^29.7.0"
   }

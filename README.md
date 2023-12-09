@@ -1,8 +1,8 @@
 # Chickenfoot
 
-<img src="logo.png" style="width: 30%; float: right; margin: 1rem 0 1rem 2rem; border-radius: 1rem; max-width: 250px; float: right" align="right">
+<img src="logo.png" style="width: 30%; float: right; margin: 1rem 0 1rem 2rem; border-radius: 1rem; max-width: 250px; float: right" align="right" width="250">
 
-Chickenfoot is a two-dimensional programming language for chickens 🐔
+🐔 Chickenfoot is a two-dimensional programming language for chickens.
 
 Inspired by a chicken tap dance with dominos:
 
@@ -230,13 +230,19 @@ An alternative version of a program which add values in *r0* and *r1*
 
 ## Try it
 
-This repository contains a JavaScript interpreter for Chickenfoot:
+This repository contains a JavaScript interpreter for Chickenfoot.
+
+```sh
+npm i chickenfoot
+```
+
+It takes source code as the first argument and optionally initial
+ register values:
 
 ```js
-const chickenfoot = require('./chickenfoot')
+const chickenfoot = require('chickenfoot')
 
-// takes source code as the first argument
-// and optionally initial register values
+// interpreter
 const output = chickenfoot(`
          ⠮       ⠮
         ⠮ ⠫     ⠮ ⠫
