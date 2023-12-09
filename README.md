@@ -8,15 +8,15 @@ Inspired by a chicken tap dance with dominos:
 
 
 ```chickenfoot
-           ⠮       ⠮
-          ⠮ ⠫     ⠮ ⠫
-         ⠷⠈⠧⠩    ⠷⠌⠧⠩
-        ⠹ ⠼     ⠹
-       ⠹   ⠼   ⠹
-      ⠹     ⠼ ⠹
- ⠿⠽⠽⠽⠘⠋⠏⠠⠬   ⠚⠋⠏⠢⠬
-      ⠫  ⠮    ⠫  ⠮
-       ⠫⠯      ⠫⠯
+          ⠮       ⠮
+         ⠮ ⠫     ⠮ ⠫
+        ⠷⠈⠧⠩    ⠷⠌⠧⠩
+       ⠹ ⠼     ⠹
+      ⠹   ⠼   ⠹
+     ⠹     ⠼ ⠹
+⠿⠽⠽⠽⠘⠋⠏⠠⠬   ⠚⠋⠏⠢⠬
+     ⠫  ⠮    ⠫  ⠮
+      ⠫⠯      ⠫⠯
 ```
 
 ## How it works
@@ -53,7 +53,7 @@ The **begin** command `⠿` indicates the beginning of the program.
 ⠿
 ```
 
-Except the begin command, dots in the second column indicates the 
+Except for the begin command, dots in the second column indicate the
  operation:
 
 | Col | Rows | Operation             | Precedence | Examples |
@@ -63,19 +63,19 @@ Except the begin command, dots in the second column indicates the
 | 2   | B    | Conditional branching | 2          | `⠟`, `⠷` |
 | 2   | A+C  | Flow                  | 3          | `⠽`, `⠫` |
 
-Operations *conditional branching* and *flow* combinate another dots as
+Operations *conditional branching* and *flow* combine other dots as
  additional parameters.
 
 For **arithmetic commands** increment, decrement, and the 
  **control flow** command conditional branching, the number of dots in
  the first column indicates the index of a register to work with:
 
-| Col | Number of dots | Register index | Examples |
-|:---:|:--------------:|:--------------:|:--------:|
-| 1   | 0              | r0             | `⠈`, `⠘` |
-| 1   | 1              | r1             | `⠉`, `⠜` |
-| 1   | 2              | r2             | `⠋`, `⠝` |
-| 1   | 3              | r3             | `⠏`, `⠟` |
+| Col | Number of dots | Register | Examples |
+|:---:|:--------------:|:--------:|:--------:|
+| 1   | 0              | r0       | `⠈`, `⠘` |
+| 1   | 1              | r1       | `⠉`, `⠜` |
+| 1   | 2              | r2       | `⠋`, `⠝` |
+| 1   | 3              | r3       | `⠏`, `⠟` |
 
 The vertical position of dots in the column is irrelevant and fully
  aesthetics-driven. The following commands are equivalent:
@@ -83,9 +83,9 @@ The vertical position of dots in the column is irrelevant and fully
 
 ### Increment
 
-The increment command increments the value of the selected register.
+The increment command increases the value of the selected register.
 
-An example of incrementing the register *r2* two times:
+An example of incrementing *r2* two times:
 
 ```chickenfoot
 ⠿⠍⠋
@@ -93,10 +93,10 @@ An example of incrementing the register *r2* two times:
 
 ### Decrement 
 
-The decrement command decrement the value of the selected register if 
+The decrement command decreases the value of the selected register if 
  its current value is greater than zero.
 
-An example of decrementing the register *r1* two times after 
+An example of decrementing *r1* two times after 
  incrementing it three times:
 
 ```chickenfoot
@@ -189,8 +189,8 @@ The program copies content of *r0* to *r1*:
 
 ### Fibonacci sequence
 
-Takes an index in *r0* and computes the corresponding Fibonacci number
- in *r2*:
+The program takes an index in *r0* and computes the corresponding 
+ Fibonacci number in *r2*:
 
 ```chickenfoot
         ⠮
@@ -207,7 +207,7 @@ Takes an index in *r0* and computes the corresponding Fibonacci number
 
 ### Addition of two numbers
 
-An alternative version of a program which add values in *r0* and *r1*
+An alternative version of a program which adds values in *r0* and *r1*
  to *r2*:
 
 ```chickenfoot
