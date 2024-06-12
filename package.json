@@ -1,6 +1,6 @@
 {
   "name": "chickenfoot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chickenfoot 2D programming language",
   "main": "chickenfoot.js",
   "scripts": {

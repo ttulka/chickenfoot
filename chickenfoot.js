@@ -19,7 +19,7 @@ const DIR = [NN, NW, NE, SS, SW, SE, WW, EE]
 const ALL = [BEGIN, ...COND_U, ...COND_D, ...INC, ...DEC, ...DIR]
 // unused: '⠐', '⠨', '⠸', '⠁', '⠂', '⠄', '⠑', '⠒', '⠔', '⠪', '⠺', '⠃', '⠆', '⠓', '⠕', '⠖', '⠭', '⠻', '⠾', '⠇', '⠗'
 
-const interpret = (program, reg0, reg1, reg2, reg3) => {
+const interpret = (program, reg0, reg1, reg2, reg3, onStep) => {
     // initialize
     const r = [reg0 ? reg0 : 0, reg1 ? reg1 : 0, reg2 ? reg2 : 0, reg3 ? reg3 : 0]
     const p = parse(program)
@@ -33,68 +33,57 @@ const interpret = (program, reg0, reg1, reg2, reg3) => {
         const c = p.get(idx)
         if (BEGIN === c) {
             i.c++
-            continue
-        }
+        } else
         if (COND_U.includes(c)) {
             const v = r[regIndex(c)]
             if (!v) i.r--
             i.c++
-            continue
-        }
+        } else
         if (COND_D.includes(c)) {
             const v = r[regIndex(c)]
             if (!v) i.r++
             i.c++
-            continue
-        }
+        } else
         if (INC.includes(c)) {
             r[regIndex(c)]++
             i.c++
-            continue
-        }
+        } else
         if (DEC.includes(c)) {
             const ri = regIndex(c) 
             if (r[ri] > 0) r[ri]--
             i.c++
-            continue
-        }
+        } else
         if (NN === c) {
             i.r--
-            continue
-        }
+        } else
         if (NE === c) {
             i.r--
             i.c++
-            continue
-        }
+        } else
         if (EE === c) {
             i.c++
-            continue
-        }
+        } else
         if (SE === c) {
             i.r++
             i.c++
-            continue
-        }
+        } else
         if (SS === c) {
             i.r++
-            continue
-        }
+        } else
         if (SW === c) {
             i.r++
             i.c--
-            continue
-        }
+        } else
         if (WW === c) {
             i.c--
-            continue
-        }
+        } else
         if (NW === c) {
             i.r--
             i.c--
-            continue
-        }
-        throw new Error('INVALID_CMD')
+        } 
+        else throw new Error('INVALID_CMD')
+
+        if (typeof onStep === 'function') onStep([...r])
     }
     return r
 }
